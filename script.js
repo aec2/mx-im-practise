@@ -1,4 +1,4 @@
-// Modern Quiz App with Enhanced UX
+// Modern Quiz App with Enhanced UX - Updated Version
 const questions = [
     // Scrum Questions
     {
@@ -10,7 +10,8 @@ const questions = [
             "Sprint review",
             "Sprint planning"
         ],
-        correct: 3
+        correct: 3,
+        explanation: "Sprint planning is the event that marks the beginning of each sprint, where the team selects and plans the work to be completed."
     },
     // Version Control & Collaboration Questions
     {
@@ -22,7 +23,8 @@ const questions = [
             "By exporting a app package and sharing it with your team",
             "By creating a data snapshot and adding it to the deployment directory of your app"
         ],
-        correct: 3
+        correct: 3,
+        explanation: "Data snapshots allow you to share database structure and test data with your team through version control."
     },
     {
         topic: "Version Control & Collaboration",
@@ -33,7 +35,8 @@ const questions = [
             "Delete-Delete",
             "Modify-Delete"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "When both developers modify the same element (the microflow), it creates a Modify-Modify conflict."
     },
     {
         topic: "Version Control & Collaboration",
@@ -44,7 +47,8 @@ const questions = [
             "A revision that has been used to build a Mx deployment package",
             "A revision of another branch line"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "A tagged version is a specific revision that has been marked and used to create a Mendix deployment package, making it easy to identify release versions."
     },
     {
         topic: "Version Control & Collaboration",
@@ -55,7 +59,8 @@ const questions = [
             "Quick fix",
             "Advanced merge"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "Merge feature branch is specifically designed to integrate an entire branch's changes into the mainline."
     },
     {
         topic: "Version Control & Collaboration",
@@ -66,7 +71,8 @@ const questions = [
             "Cherry Pick (or Port fix)",
             "Quick fix"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "Cherry Pick (Port fix) allows you to selectively merge specific revisions between any branches or the mainline."
     },
     // XPath in Mendix Questions
     {
@@ -78,7 +84,8 @@ const questions = [
             "List Views",
             "Page access rules"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "List Views use XPath constraints to filter and retrieve specific data sets for display."
     },
     {
         topic: "XPath in Mendix",
@@ -89,7 +96,8 @@ const questions = [
             "Dynamic text in Labels",
             "The tab index of a Group Box"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "Reference Selectors use XPath constraints to limit which objects can be selected based on specific criteria."
     },
     {
         topic: "XPath in Mendix",
@@ -100,7 +108,8 @@ const questions = [
             "In the 'Retrieve' action",
             "In the 'Commit' action"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "The Retrieve action in microflows uses XPath to specify which objects to retrieve from the database."
     },
     {
         topic: "XPath in Mendix",
@@ -111,7 +120,8 @@ const questions = [
             "'",
             "<"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "XPath expressions in Mendix always start with an opening square bracket [."
     },
     {
         topic: "XPath in Mendix",
@@ -122,7 +132,8 @@ const questions = [
             "Ctrl + Shift",
             "Shift + Space"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "Ctrl + Space is the standard keyboard shortcut to trigger auto-complete functionality in Mendix Studio Pro."
     },
     {
         topic: "XPath in Mendix",
@@ -133,7 +144,8 @@ const questions = [
             "A new list of requests where the Status will not be 'Cancelled'",
             "A new object with Status = 'Cancelled'"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "This XPath filters to return only VacationRequest objects where the Status attribute equals 'Cancelled'."
     },
     {
         topic: "XPath in Mendix",
@@ -144,7 +156,8 @@ const questions = [
             "A list of all vacation requests submitted by the current user",
             "A list of all the vacation requests submitted by the current user where the status is 'Approved'"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "This XPath retrieves all vacation requests where the submitter association points to the current user, regardless of status."
     },
     {
         topic: "XPath in Mendix",
@@ -155,7 +168,8 @@ const questions = [
             "A list of all VacationRequests that have been approved and are shorter than 4.5 days",
             "A list of all VacationRequests that are shorter than 4.5 days and have a Submitter assigned"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "This XPath finds requests with DaysUsed less than 4.5 AND where the submitter association is empty (not assigned)."
     },
     {
         topic: "XPath in Mendix",
@@ -166,7 +180,8 @@ const questions = [
             "The grid will show All VacationRequests where the StartDate is not populated",
             "This XPath will throw an error in Mendix Studio Pro. DateTimes cannot be empty"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "The 'empty' keyword in XPath filters for objects where the specified attribute has no value (is null)."
     },
     {
         topic: "Scrum",
@@ -177,7 +192,8 @@ const questions = [
             "Team members chat about non-work subjects to decompress",
             "Team members share their progress, plans, and issues"
         ],
-        correct: 3
+        correct: 3,
+        explanation: "The daily scrum is a short meeting where team members synchronize by sharing what they did, what they plan to do, and any blockers they face."
     },
     {
         topic: "Scrum",
@@ -188,7 +204,8 @@ const questions = [
             "The number of tasks in the user story",
             "The velocity of the team"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "Story points are a relative measure of the effort, complexity, and difficulty required to implement a user story."
     },
     {
         topic: "Scrum",
@@ -199,7 +216,8 @@ const questions = [
             "Product Backlog Refinement",
             "Daily Scrum"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "Sprint Planning is where the team selects and commits to the user stories they will complete during the upcoming sprint."
     },
     // Mendix App Structure
     {
@@ -211,7 +229,8 @@ const questions = [
             "Only Javasource folder",
             "Only Javascriptsource folder"
         ],
-        correct: 0
+        correct: 0,
+        explanation: "Both JavaSource and JavaScriptSource folders contain module-specific code that can be reused when the module is exported and imported to other applications."
     },
     {
         topic: "Mendix App Structure",
@@ -523,6 +542,11 @@ let score = 0;
 let answered = false;
 let quizStarted = false;
 let incorrectAnswers = [];
+let selectedTopics = [];
+let filteredQuestions = [];
+let timerInterval = null;
+let timeRemaining = 0;
+let quizHistory = [];
 
 // DOM Elements
 const elements = {
@@ -533,6 +557,7 @@ const elements = {
     options: null,
     feedback: null,
     nextButton: null,
+    prevButton: null,
     finishButton: null,
     quizContent: null,
     results: null,
@@ -544,7 +569,9 @@ const elements = {
     modalQuestionsRemaining: null,
     modalCurrentScore: null,
     cancelFinish: null,
-    confirmFinish: null
+    confirmFinish: null,
+    timerElement: null,
+    progressText: null
 };
 
 // Initialize the app
@@ -600,7 +627,7 @@ function addEventListeners() {
     document.addEventListener('keydown', handleKeyboardNavigation);
 }
 
-// Handle keyboard navigation
+// Enhanced keyboard navigation
 function handleKeyboardNavigation(event) {
     // Handle modal keyboard navigation first
     if (elements.finishModal && elements.finishModal.style.display === 'flex') {
@@ -632,6 +659,7 @@ function handleKeyboardNavigation(event) {
             break;
         case 'Enter':
         case ' ':
+            event.preventDefault();
             if (answered && elements.nextButton && elements.nextButton.classList.contains('show')) {
                 nextQuestion();
             }
@@ -641,35 +669,123 @@ function handleKeyboardNavigation(event) {
                 nextQuestion();
             }
             break;
+        case 'ArrowLeft':
+            if (currentQuestion > 0 && elements.prevButton) {
+                previousQuestion();
+            }
+            break;
     }
 }
 
-// Show welcome screen
+// Show enhanced welcome screen with topic selection
 function showWelcomeScreen() {
     elements.quizContent.style.display = 'none';
     elements.results.style.display = 'none';
     
+    const topics = getUniqueTopics();
+    const topicCounts = getTopicQuestionCounts();
+    
     const welcomeHTML = `
         <div class="welcome-screen" style="text-align: center; padding: 40px 20px;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #1a1a1a; font-weight: 800;">🎯 Welcome to the Quiz!</h2>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #1a1a1a; font-weight: 800;">🎯 Mendix Practice Quiz</h2>
             <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px; line-height: 1.6;">
-                Test your knowledge on Development & Scrum with ${questions.length} carefully crafted questions.
+                Test your knowledge with ${questions.length} carefully crafted questions across multiple topics.
             </p>
-            <div style="background: rgba(0,0,0,0.05); padding: 20px; border-radius: 16px; margin: 20px 0;">
-                <h3 style="color: #333; margin-bottom: 15px;">📚 Topics Covered:</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
-                    ${getUniqueTopics().map(topic => `<span style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">${topic}</span>`).join('')}
+            
+            <div class="topic-selection">
+                <h3>📚 Select Topics to Practice</h3>
+                <p style="color: #666; margin-bottom: 20px; font-size: 0.95rem;">Choose which topics you'd like to focus on, or select all for a comprehensive quiz.</p>
+                <div class="topic-grid">
+                    ${topics.map(topic => `
+                        <div class="topic-item" data-topic="${topic}">
+                            <h4>${topic}</h4>
+                            <div class="question-count">${topicCounts[topic]} questions</div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div style="margin: 20px 0;">
+                    <button id="selectAllTopics" class="nav-button" style="margin-right: 10px;">Select All</button>
+                    <button id="clearTopics" class="nav-button">Clear All</button>
                 </div>
             </div>
-            <button id="startQuizBtn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 16px; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">🚀 Start Quiz</button>
+            
+            <div class="timer-selection" style="margin: 20px 0;">
+                <h3>⏱️ Quiz Timer (Optional)</h3>
+                <select id="timerSelect" style="padding: 10px; border-radius: 8px; border: 2px solid #ddd; font-size: 1rem; margin: 10px;">
+                    <option value="0">No Timer</option>
+                    <option value="1800">30 minutes</option>
+                    <option value="3600">60 minutes</option>
+                    <option value="5400">90 minutes</option>
+                </select>
+            </div>
+            
+            <button id="startQuizBtn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 16px; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 32px rgba(0,0,0,0.1); opacity: 0.5;" disabled>🚀 Start Quiz</button>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 10px;">Select at least one topic to begin</p>
         </div>
     `;
     
     elements.quizContent.innerHTML = welcomeHTML;
     elements.quizContent.style.display = 'block';
     
+    // Add event listeners for topic selection
+    setupTopicSelection();
+    
     // Add start button event listener
     document.getElementById('startQuizBtn').addEventListener('click', startQuiz);
+}
+
+// Setup topic selection functionality
+function setupTopicSelection() {
+    const topicItems = document.querySelectorAll('.topic-item');
+    const startBtn = document.getElementById('startQuizBtn');
+    const selectAllBtn = document.getElementById('selectAllTopics');
+    const clearBtn = document.getElementById('clearTopics');
+    
+    topicItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const topic = item.dataset.topic;
+            item.classList.toggle('selected');
+            
+            if (item.classList.contains('selected')) {
+                if (!selectedTopics.includes(topic)) {
+                    selectedTopics.push(topic);
+                }
+            } else {
+                selectedTopics = selectedTopics.filter(t => t !== topic);
+            }
+            
+            updateStartButton();
+        });
+    });
+    
+    selectAllBtn.addEventListener('click', () => {
+        topicItems.forEach(item => {
+            item.classList.add('selected');
+            const topic = item.dataset.topic;
+            if (!selectedTopics.includes(topic)) {
+                selectedTopics.push(topic);
+            }
+        });
+        updateStartButton();
+    });
+    
+    clearBtn.addEventListener('click', () => {
+        topicItems.forEach(item => item.classList.remove('selected'));
+        selectedTopics = [];
+        updateStartButton();
+    });
+    
+    function updateStartButton() {
+        if (selectedTopics.length > 0) {
+            startBtn.disabled = false;
+            startBtn.style.opacity = '1';
+            startBtn.nextElementSibling.textContent = `Ready to start with ${selectedTopics.length} topic${selectedTopics.length > 1 ? 's' : ''}`;
+        } else {
+            startBtn.disabled = true;
+            startBtn.style.opacity = '0.5';
+            startBtn.nextElementSibling.textContent = 'Select at least one topic to begin';
+        }
+    }
 }
 
 // Get unique topics for welcome screen
@@ -677,9 +793,38 @@ function getUniqueTopics() {
     return [...new Set(questions.map(q => q.topic))];
 }
 
-// Start the quiz
+// Get question counts per topic
+function getTopicQuestionCounts() {
+    const counts = {};
+    questions.forEach(q => {
+        counts[q.topic] = (counts[q.topic] || 0) + 1;
+    });
+    return counts;
+}
+
+// Start the quiz with selected topics
 function startQuiz() {
     quizStarted = true;
+    
+    // Filter questions based on selected topics
+    filteredQuestions = questions.filter(q => selectedTopics.includes(q.topic));
+    
+    // Shuffle questions for variety
+    filteredQuestions = shuffleArray(filteredQuestions);
+    
+    // Setup timer if selected
+    const timerSelect = document.getElementById('timerSelect');
+    if (timerSelect && timerSelect.value !== "0") {
+        timeRemaining = parseInt(timerSelect.value);
+        startTimer();
+    }
+    
+    // Reset state
+    currentQuestion = 0;
+    score = 0;
+    answered = false;
+    incorrectAnswers = [];
+    quizHistory = [];
     
     // Create the quiz content structure
     createQuizContent();
@@ -688,17 +833,67 @@ function startQuiz() {
     loadQuestion();
 }
 
-// Create quiz content structure
+// Shuffle array utility
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Start quiz timer
+function startTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+    
+    timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            showResults();
+        }
+    }, 1000);
+}
+
+// Update timer display
+function updateTimerDisplay() {
+    if (!elements.timerElement) return;
+    
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+    const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    
+    elements.timerElement.textContent = `⏱️ ${timeString}`;
+    
+    // Add warning class when time is running low
+    if (timeRemaining <= 300) { // 5 minutes
+        elements.timerElement.classList.add('warning');
+    }
+}
+
+// Create enhanced quiz content structure
 function createQuizContent() {
+    const timerHTML = timeRemaining > 0 ? `
+        <div class="timer-container">
+            <div class="timer" id="timerElement">⏱️ ${Math.floor(timeRemaining / 60)}:${(timeRemaining % 60).toString().padStart(2, '0')}</div>
+        </div>
+    ` : '';
+    
     const quizHTML = `
+        ${timerHTML}
+        <div class="progress-text" id="progressText">Question 1 of ${filteredQuestions.length}</div>
         <div class="topic-badge" id="topicBadge">Loading...</div>
-        <div class="question-counter" id="questionCounter">Question 1 of ${questions.length}</div>
+        <div class="question-counter" id="questionCounter">1 / ${filteredQuestions.length}</div>
         <div class="question" id="question">Loading question...</div>
         <div class="options" id="options"></div>
         <div class="feedback" id="feedback"></div>
-        <div class="quiz-actions">
-            <button class="next-button" id="nextButton">Next Question</button>
-            <button class="finish-button" id="finishButton" style="display: none;">🏁 Finish Exam</button>
+        <div class="quiz-navigation">
+            <button class="nav-button" id="prevButton" style="display: none;" disabled>← Previous</button>
+            <button class="next-button" id="nextButton" style="display: none;">Next Question →</button>
+            <button class="finish-button" id="finishButton" style="display: none;">🏁 Finish Quiz</button>
         </div>
     `;
     
@@ -711,26 +906,31 @@ function createQuizContent() {
     elements.options = document.getElementById('options');
     elements.feedback = document.getElementById('feedback');
     elements.nextButton = document.getElementById('nextButton');
+    elements.prevButton = document.getElementById('prevButton');
     elements.finishButton = document.getElementById('finishButton');
+    elements.timerElement = document.getElementById('timerElement');
+    elements.progressText = document.getElementById('progressText');
     
     // Add event listeners
     elements.nextButton.addEventListener('click', nextQuestion);
+    elements.prevButton.addEventListener('click', previousQuestion);
     if (elements.finishButton) {
         elements.finishButton.addEventListener('click', finishExam);
     }
 }
 
-// Load question with smooth transitions
+// Load question with enhanced feedback and explanations
 function loadQuestion() {
     answered = false;
-    const q = questions[currentQuestion];
+    const q = filteredQuestions[currentQuestion];
     
     // Update progress with smooth animation
     updateProgress();
     
     // Update UI elements
     elements.topicBadge.textContent = q.topic;
-    elements.questionCounter.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+    elements.questionCounter.textContent = `${currentQuestion + 1} / ${filteredQuestions.length}`;
+    elements.progressText.textContent = `Question ${currentQuestion + 1} of ${filteredQuestions.length}`;
     elements.question.textContent = q.question;
     
     // Clear and add options with staggered animation
@@ -739,10 +939,23 @@ function loadQuestion() {
     q.options.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
-        optionDiv.textContent = option;
+        optionDiv.setAttribute('tabindex', '0');
+        optionDiv.setAttribute('role', 'button');
+        optionDiv.setAttribute('aria-label', `Option ${index + 1}: ${option}`);
+        
+        const optionText = document.createElement('span');
+        optionText.textContent = option;
+        optionDiv.appendChild(optionText);
+        
         optionDiv.style.opacity = '0';
         optionDiv.style.transform = 'translateX(-20px)';
         optionDiv.addEventListener('click', () => selectOption(index));
+        optionDiv.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectOption(index);
+            }
+        });
         elements.options.appendChild(optionDiv);
         
         // Staggered animation
@@ -753,43 +966,57 @@ function loadQuestion() {
         }, index * 50);
     });
     
-    // Hide feedback, next button, and finish button
+    // Hide feedback and buttons
     elements.feedback.className = 'feedback';
-    elements.nextButton.className = 'next-button';
+    elements.nextButton.style.display = 'none';
+    elements.prevButton.style.display = currentQuestion > 0 ? 'inline-block' : 'none';
+    elements.prevButton.disabled = false;
     if (elements.finishButton) {
-        elements.finishButton.style.display = 'none';
+        elements.finishButton.style.display = currentQuestion >= 2 ? 'inline-block' : 'none';
     }
 }
 
-// Update progress bar with smooth animation
-function updateProgress() {
-    const progress = ((currentQuestion + 1) / questions.length) * 100;
-    elements.progressFill.style.width = progress + '%';
-}
-
-// Select option with enhanced feedback
+// Enhanced option selection with better feedback
 function selectOption(index) {
     if (answered) return;
     answered = true;
     
-    const q = questions[currentQuestion];
+    const q = filteredQuestions[currentQuestion];
     const options = document.querySelectorAll('.option');
     const feedback = elements.feedback;
+    
+    // Store the answer in history
+    quizHistory.push({
+        questionIndex: currentQuestion,
+        selectedAnswer: index,
+        correctAnswer: q.correct,
+        isCorrect: index === q.correct
+    });
     
     // Immediate visual feedback on click
     options[index].classList.add('clicked');
     
     // Disable all options immediately and add selected state
     setTimeout(() => {
-        options.forEach(opt => opt.classList.add('disabled'));
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.removeAttribute('tabindex');
+        });
         options[index].classList.remove('clicked');
         options[index].classList.add('selected');
         
-        // Provide feedback with minimal delay for visual polish
+        // Provide enhanced feedback with minimal delay
         setTimeout(() => {
+            let feedbackHTML = '';
+            
             if (index === q.correct) {
                 options[index].classList.add('correct');
-                feedback.innerHTML = '🎉 Correct! Excellent work!';
+                feedbackHTML = `
+                    <div style="display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 15px;">
+                        <span style="font-size: 1.5rem;">✅</span>
+                        <span style="font-size: 1.2rem; font-weight: 700;">Correct!</span>
+                    </div>
+                `;
                 feedback.className = 'feedback correct show';
                 score++;
                 
@@ -798,7 +1025,13 @@ function selectOption(index) {
             } else {
                 options[index].classList.add('incorrect');
                 options[q.correct].classList.add('correct');
-                feedback.innerHTML = '❌ Not quite right. The correct answer is highlighted below.';
+                feedbackHTML = `
+                    <div style="display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 15px;">
+                        <span style="font-size: 1.5rem;">❌</span>
+                        <span style="font-size: 1.2rem; font-weight: 700;">Incorrect</span>
+                    </div>
+                    <div style="margin-bottom: 10px;">The correct answer is highlighted in green above.</div>
+                `;
                 feedback.className = 'feedback incorrect show';
                 
                 // Store incorrect answer details
@@ -807,34 +1040,49 @@ function selectOption(index) {
                     topic: q.topic,
                     yourAnswer: q.options[index],
                     correctAnswer: q.options[q.correct],
-                    questionIndex: currentQuestion
+                    questionIndex: currentQuestion,
+                    explanation: q.explanation || "No explanation available."
                 });
             }
             
+            // Add explanation if available
+            if (q.explanation) {
+                feedbackHTML += `
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.05); border-radius: 12px; border-left: 4px solid #667eea;">
+                        <div style="font-weight: 600; color: #667eea; margin-bottom: 8px; font-size: 0.9rem;">💡 EXPLANATION:</div>
+                        <div style="color: #555; line-height: 1.5;">${q.explanation}</div>
+                    </div>
+                `;
+            }
+            
+            feedback.innerHTML = feedbackHTML;
+            
+            // Show navigation buttons
+            elements.nextButton.style.display = 'inline-block';
             elements.nextButton.className = 'next-button show';
             
-            // Show finish button after answering 3 questions
-            if (currentQuestion >= 2 && elements.finishButton) {
-                elements.finishButton.style.display = 'block';
-                elements.finishButton.className = 'finish-button show';
-            }
+            // Auto-scroll to keep controls visible
+            setTimeout(() => {
+                elements.nextButton.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 300);
+            
         }, 50);
     }, 50);
 }
 
-// Add confetti effect for correct answers
+// Enhanced confetti effect
 function addConfettiEffect() {
-    const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe'];
+    const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe', '#10b981'];
     
     for (let i = 0; i < 50; i++) {
         const confetti = document.createElement('div');
         confetti.style.position = 'fixed';
-        confetti.style.width = '8px';
-        confetti.style.height = '8px';
+        confetti.style.width = `${Math.random() * 10 + 5}px`;
+        confetti.style.height = `${Math.random() * 10 + 5}px`;
         confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
         confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.top = '-10px';
-        confetti.style.borderRadius = '50%';
+        confetti.style.top = '-20px';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
         confetti.style.pointerEvents = 'none';
         confetti.style.zIndex = '9999';
         confetti.style.animation = `confettiFall ${Math.random() * 3 + 2}s linear forwards`;
@@ -843,32 +1091,250 @@ function addConfettiEffect() {
         
         // Remove confetti after animation
         setTimeout(() => {
-            confetti.remove();
+            if (confetti.parentNode) {
+                confetti.remove();
+            }
         }, 5000);
     }
 }
 
-// Add confetti animation to CSS
-const confettiStyle = document.createElement('style');
-confettiStyle.textContent = `
-    @keyframes confettiFall {
-        to {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
+// Previous question navigation
+function previousQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+        
+        // Restore previous answer if it exists
+        const previousAnswer = quizHistory[currentQuestion];
+        if (previousAnswer) {
+            // Simulate the previous selection to show the result
+            setTimeout(() => {
+                selectOption(previousAnswer.selectedAnswer);
+            }, 100);
         }
     }
-`;
-document.head.appendChild(confettiStyle);
+}
 
-// Finish exam early - show modal
+// Enhanced next question functionality
+function nextQuestion() {
+    currentQuestion++;
+    
+    if (currentQuestion < filteredQuestions.length) {
+        // Fade out current question
+        elements.quizContent.style.opacity = '0';
+        elements.quizContent.style.transform = 'translateY(-20px)';
+        
+        setTimeout(() => {
+            loadQuestion();
+            elements.quizContent.style.opacity = '1';
+            elements.quizContent.style.transform = 'translateY(0)';
+        }, 150);
+    } else {
+        showResults();
+    }
+}
+
+// Enhanced progress update
+function updateProgress() {
+    const progress = ((currentQuestion + 1) / filteredQuestions.length) * 100;
+    elements.progressFill.style.width = progress + '%';
+}
+
+// Show enhanced results with summary
+function showResults() {
+    // Clear timer if active
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
+    elements.quizContent.style.display = 'none';
+    elements.results.className = 'results show';
+    elements.results.style.display = 'block';
+    
+    const questionsAnswered = quizHistory.length;
+    const correctAnswers = quizHistory.filter(q => q.isCorrect).length;
+    const percentage = questionsAnswered > 0 ? Math.round((correctAnswers / questionsAnswered) * 100) : 0;
+    const isPartialCompletion = questionsAnswered < filteredQuestions.length;
+    
+    elements.finalScore.textContent = `${correctAnswers}/${questionsAnswered}`;
+    
+    // Animate score reveal
+    setTimeout(() => {
+        elements.finalScore.style.animation = 'scoreReveal 1s cubic-bezier(0.4, 0, 0.2, 1)';
+    }, 100);
+    
+    let message = '';
+    let emoji = '';
+    
+    if (isPartialCompletion) {
+        message = `Quiz completed! You answered ${questionsAnswered} out of ${filteredQuestions.length} questions.`;
+        emoji = '📝';
+    } else {
+        message = 'Quiz completed! ';
+        emoji = '🎉';
+    }
+    
+    if (percentage === 100) {
+        message += ' Perfect score! You\'re a Mendix expert! 🏆';
+        emoji = '🏆';
+    } else if (percentage >= 80) {
+        message += ' Excellent performance! ⭐';
+        emoji = '🌟';
+    } else if (percentage >= 60) {
+        message += ' Good work! Keep practicing! 👏';
+        emoji = '👏';
+    } else {
+        message += ' Keep studying and practicing! 💪';
+        emoji = '💪';
+    }
+    
+    elements.scoreMessage.innerHTML = `${emoji} ${message}`;
+    
+    // Add quiz summary
+    addQuizSummary(questionsAnswered, correctAnswers, percentage);
+    
+    // Show incorrect questions if any
+    showIncorrectQuestions();
+    
+    // Add celebration for high scores
+    if (percentage >= 80) {
+        setTimeout(() => {
+            addConfettiEffect();
+        }, 1000);
+    }
+}
+
+// Add quiz summary section
+function addQuizSummary(questionsAnswered, correctAnswers, percentage) {
+    const summaryHTML = `
+        <div class="quiz-summary">
+            <h3 style="text-align: center; margin-bottom: 20px; color: #1a1a1a;">📊 Quiz Summary</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Questions Answered</div>
+                    <div class="value">${questionsAnswered}</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Correct Answers</div>
+                    <div class="value">${correctAnswers}</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Accuracy</div>
+                    <div class="value">${percentage}%</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Topics Covered</div>
+                    <div class="value">${selectedTopics.length}</div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Insert summary before incorrect questions section
+    const incorrectSection = document.getElementById('incorrectQuestions');
+    if (incorrectSection) {
+        incorrectSection.insertAdjacentHTML('beforebegin', summaryHTML);
+    } else {
+        elements.scoreMessage.insertAdjacentHTML('afterend', summaryHTML);
+    }
+}
+
+// Enhanced incorrect questions display with explanations
+function showIncorrectQuestions() {
+    const incorrectQuestionsDiv = document.getElementById('incorrectQuestions');
+    
+    if (incorrectAnswers.length === 0) {
+        if (incorrectQuestionsDiv) {
+            incorrectQuestionsDiv.style.display = 'none';
+        }
+        return;
+    }
+    
+    if (!incorrectQuestionsDiv) {
+        // Create the incorrect questions div if it doesn't exist
+        const div = document.createElement('div');
+        div.id = 'incorrectQuestions';
+        div.className = 'incorrect-questions';
+        elements.results.appendChild(div);
+    }
+    
+    const container = document.getElementById('incorrectQuestions');
+    container.style.display = 'block';
+    
+    let html = `
+        <div class="incorrect-answers-header">
+            <h3>📝 Review Your Incorrect Answers</h3>
+            <div class="incorrect-count">${incorrectAnswers.length} mistake${incorrectAnswers.length !== 1 ? 's' : ''} to learn from</div>
+        </div>
+        <div class="learning-tip">💡 Review these explanations to improve your understanding</div>
+    `;
+    
+    // Add topic summary for learning insights
+    const topicSummary = getTopicSummary(incorrectAnswers);
+    if (Object.keys(topicSummary).length > 1) {
+        html += `<div class="topic-summary">`;
+        html += `<h4>📊 Mistakes by Topic:</h4>`;
+        html += `<div class="topic-summary-grid">`;
+        Object.entries(topicSummary)
+            .sort((a, b) => b[1] - a[1])
+            .forEach(([topic, count]) => {
+                html += `<div class="topic-summary-item">`;
+                html += `<span class="topic-name">${topic}</span>`;
+                html += `<span class="mistake-count">${count} mistake${count !== 1 ? 's' : ''}</span>`;
+                html += `</div>`;
+            });
+        html += `</div></div>`;
+    }
+    
+    incorrectAnswers.forEach((incorrect, index) => {
+        html += `
+            <div class="incorrect-question">
+                <div class="question-info">
+                    <div class="topic-tag">${incorrect.topic}</div>
+                    <div class="question-number">Question ${incorrect.questionIndex + 1}</div>
+                </div>
+                <div class="question-text">${incorrect.question}</div>
+                <div class="answer-comparison">
+                    <div class="your-answer">
+                        <span class="answer-label">❌ Your answer:</span>
+                        <span class="answer-text">${incorrect.yourAnswer}</span>
+                    </div>
+                    <div class="correct-answer">
+                        <span class="answer-label">✅ Correct answer:</span>
+                        <span class="answer-text">${incorrect.correctAnswer}</span>
+                    </div>
+                </div>
+                ${incorrect.explanation ? `
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(102, 126, 234, 0.1); border-radius: 12px; border-left: 4px solid #667eea;">
+                        <div style="font-weight: 600; color: #667eea; margin-bottom: 8px; font-size: 0.9rem;">💡 EXPLANATION:</div>
+                        <div style="color: #555; line-height: 1.5;">${incorrect.explanation}</div>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+}
+
+// Get topic summary for learning insights
+function getTopicSummary(incorrectAnswers) {
+    const topicCount = {};
+    incorrectAnswers.forEach(incorrect => {
+        topicCount[incorrect.topic] = (topicCount[incorrect.topic] || 0) + 1;
+    });
+    return topicCount;
+}
+
+// Enhanced finish exam functionality
 function finishExam() {
-    const questionsAnswered = currentQuestion + 1;
-    const questionsRemaining = questions.length - questionsAnswered;
-    const currentScore = score;
+    const questionsAnswered = quizHistory.length;
+    const questionsRemaining = filteredQuestions.length - questionsAnswered;
+    const currentScore = quizHistory.filter(q => q.isCorrect).length;
     
     // Update modal content
     if (elements.modalQuestionsAnswered) {
-        elements.modalQuestionsAnswered.textContent = `${questionsAnswered} of ${questions.length}`;
+        elements.modalQuestionsAnswered.textContent = `${questionsAnswered} of ${filteredQuestions.length}`;
     }
     if (elements.modalQuestionsRemaining) {
         elements.modalQuestionsRemaining.textContent = questionsRemaining;
@@ -907,174 +1373,24 @@ function confirmFinishExam() {
     showResults();
 }
 
-// Next question with smooth transition
-function nextQuestion() {
-    currentQuestion++;
-    
-    if (currentQuestion < questions.length) {
-        // Fade out current question
-        elements.quizContent.style.opacity = '0';
-        elements.quizContent.style.transform = 'translateY(-20px)';
-        
-        setTimeout(() => {
-            loadQuestion();
-            elements.quizContent.style.opacity = '1';
-            elements.quizContent.style.transform = 'translateY(0)';
-        }, 150);
-    } else {
-        showResults();
-    }
-}
-
-// Show results with enhanced animations
-function showResults() {
-    elements.quizContent.style.display = 'none';
-    elements.results.className = 'results show';
-    elements.results.style.display = 'block';
-    
-    const questionsAnswered = currentQuestion + 1;
-    const percentage = Math.round((score / questionsAnswered) * 100);
-    const isPartialCompletion = questionsAnswered < questions.length;
-    
-    elements.finalScore.textContent = `${score}/${questionsAnswered}`;
-    
-    // Animate score reveal
-    setTimeout(() => {
-        elements.finalScore.style.animation = 'scoreReveal 1s cubic-bezier(0.4, 0, 0.2, 1)';
-    }, 100);
-    
-    let message = '';
-    let emoji = '';
-    
-    if (isPartialCompletion) {
-        message = `Exam completed early! You answered ${questionsAnswered} out of ${questions.length} questions.`;
-        emoji = '📝';
-    }
-    
-    if (percentage === 100) {
-        message += isPartialCompletion ? ' Perfect score on answered questions!' : ' Perfect! You are an absolute expert!';
-        emoji = '🏆';
-    } else if (percentage >= 80) {
-        message += isPartialCompletion ? ' Excellent performance!' : ' Outstanding! You have excellent knowledge!';
-        emoji = '🌟';
-    } else if (percentage >= 60) {
-        message += isPartialCompletion ? ' Good work!' : ' Great job! Solid understanding demonstrated!';
-        emoji = '👏';
-    } else {
-        message += isPartialCompletion ? ' Keep studying!' : ' Good effort! Keep learning and practicing!';
-        emoji = '💪';
-    }
-    
-    elements.scoreMessage.innerHTML = `${emoji} ${message}`;
-    
-    // Show incorrect questions if any
-    showIncorrectQuestions();
-    
-    // Add celebration for high scores
-    if (percentage >= 80) {
-        setTimeout(() => {
-            addConfettiEffect();
-        }, 1000);
-    }
-}
-
-// Show incorrect questions with details
-function showIncorrectQuestions() {
-    const incorrectQuestionsDiv = document.getElementById('incorrectQuestions');
-    const questionsAnswered = currentQuestion + 1;
-    const isPartialCompletion = questionsAnswered < questions.length;
-    
-    // Filter incorrect answers to only show questions that were actually attempted
-    const relevantIncorrectAnswers = incorrectAnswers.filter(incorrect => 
-        incorrect.questionIndex <= currentQuestion
-    );
-    
-    if (relevantIncorrectAnswers.length === 0) {
-        incorrectQuestionsDiv.style.display = 'none';
-        return;
-    }
-    
-    incorrectQuestionsDiv.style.display = 'block';
-    
-    let html = '';
-    if (isPartialCompletion) {
-        html = `
-            <div class="incorrect-answers-header">
-                <h3>📝 Review Your Incorrect Answers from Questions 1-${questionsAnswered}</h3>
-                <div class="incorrect-count">${relevantIncorrectAnswers.length} mistake${relevantIncorrectAnswers.length !== 1 ? 's' : ''} to learn from</div>
-            </div>
-        `;
-    } else {
-        html = `
-            <div class="incorrect-answers-header">
-                <h3>📝 Review Your Incorrect Answers</h3>
-                <div class="incorrect-count">${relevantIncorrectAnswers.length} mistake${relevantIncorrectAnswers.length !== 1 ? 's' : ''} to learn from</div>
-            </div>
-        `;
-    }
-    
-    if (relevantIncorrectAnswers.length > 0) {
-        html += `<div class="learning-tip">💡 Study these topics to improve your knowledge</div>`;
-        
-        // Add topic summary for learning insights
-        const topicSummary = getTopicSummary(relevantIncorrectAnswers);
-        if (Object.keys(topicSummary).length > 1) {
-            html += `<div class="topic-summary">`;
-            html += `<h4>📊 Mistakes by Topic:</h4>`;
-            html += `<div class="topic-summary-grid">`;
-            Object.entries(topicSummary)
-                .sort((a, b) => b[1] - a[1])
-                .forEach(([topic, count]) => {
-                    html += `<div class="topic-summary-item">`;
-                    html += `<span class="topic-name">${topic}</span>`;
-                    html += `<span class="mistake-count">${count} mistake${count !== 1 ? 's' : ''}</span>`;
-                    html += `</div>`;
-                });
-            html += `</div></div>`;
-        }
-    }
-    
-    relevantIncorrectAnswers.forEach((incorrect, index) => {
-        html += `
-            <div class="incorrect-question">
-                <div class="question-info">
-                    <div class="topic-tag">${incorrect.topic}</div>
-                    <div class="question-number">Question ${incorrect.questionIndex + 1}</div>
-                </div>
-                <div class="question-text">${incorrect.question}</div>
-                <div class="answer-comparison">
-                    <div class="your-answer">
-                        <span class="answer-label">❌ Your answer:</span>
-                        <span class="answer-text">${incorrect.yourAnswer}</span>
-                    </div>
-                    <div class="correct-answer">
-                        <span class="answer-label">✅ Correct answer:</span>
-                        <span class="answer-text">${incorrect.correctAnswer}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-    
-    incorrectQuestionsDiv.innerHTML = html;
-}
-
-// Get topic summary for learning insights
-function getTopicSummary(incorrectAnswers) {
-    const topicCount = {};
-    incorrectAnswers.forEach(incorrect => {
-        topicCount[incorrect.topic] = (topicCount[incorrect.topic] || 0) + 1;
-    });
-    return topicCount;
-}
-
-// Restart quiz with smooth transition
+// Enhanced restart quiz functionality
 function restartQuiz() {
+    // Clear timer
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+    
+    // Reset all state
     currentQuestion = 0;
     score = 0;
     answered = false;
     quizStarted = false;
     incorrectAnswers = [];
+    selectedTopics = [];
+    filteredQuestions = [];
+    timeRemaining = 0;
+    quizHistory = [];
     
     // Fade out results
     elements.results.style.opacity = '0';
@@ -1086,5 +1402,27 @@ function restartQuiz() {
     }, 300);
 }
 
+// Add confetti animation to CSS if not already present
+if (!document.querySelector('#confetti-styles')) {
+    const confettiStyle = document.createElement('style');
+    confettiStyle.id = 'confetti-styles';
+    confettiStyle.textContent = `
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(confettiStyle);
+}
+
 // Start the quiz when page loads
 window.addEventListener('DOMContentLoaded', init);
+
+// Add service worker for offline functionality (optional enhancement)
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+        // Service worker registration failed, but app still works
+    });
+}

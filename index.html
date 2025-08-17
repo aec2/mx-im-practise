@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendix Intermediate Certification Practice Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Interactive practice quiz for Mendix Intermediate Certification with detailed explanations and progress tracking">
+    <meta name="theme-color" content="#667eea">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 </head>
 <body>
     <div class="quiz-container">
@@ -15,29 +18,33 @@
             </div>
         </div>
 
-        <div id="quizContent">
+        <main id="quizContent" role="main" aria-live="polite">
             <div class="topic-badge" id="topicBadge">Loading...</div>
             <div class="question-counter" id="questionCounter">Question 1 of 42</div>
-            <div class="question" id="question">Loading question...</div>
-            <div class="options" id="options"></div>
-            <div class="feedback" id="feedback"></div>
-            <button class="next-button" id="nextButton">Next Question</button>
-        </div>
+            <div class="question" id="question" role="heading" aria-level="2">Loading question...</div>
+            <div class="options" id="options" role="group" aria-label="Answer options"></div>
+            <div class="feedback" id="feedback" role="status" aria-live="assertive"></div>
+            <div class="quiz-navigation">
+                <button class="nav-button" id="prevButton" aria-label="Go to previous question">← Previous</button>
+                <button class="next-button" id="nextButton" aria-label="Go to next question">Next Question →</button>
+                <button class="finish-button" id="finishButton" aria-label="Finish quiz early">🏁 Finish Quiz</button>
+            </div>
+        </main>
 
-        <div class="results" id="results">
-            <h2>Quiz Complete!</h2>
-            <div class="score" id="finalScore">0/0</div>
-            <p id="scoreMessage">Calculating...</p>
-            <div class="incorrect-questions" id="incorrectQuestions" style="display: none;"></div>
-            <button class="restart-button" id="restartButton">Try Again</button>
+        <div class="results" id="results" role="region" aria-label="Quiz results">
+            <h2>Quiz Complete! 🎉</h2>
+            <div class="score" id="finalScore" aria-label="Final score">0/0</div>
+            <p id="scoreMessage" role="status">Calculating...</p>
+            <div class="incorrect-questions" id="incorrectQuestions" style="display: none;" aria-label="Review incorrect answers"></div>
+            <button class="restart-button" id="restartButton" aria-label="Start a new quiz">🔄 Try Again</button>
         </div>
     </div>
 
     <!-- Finish Exam Confirmation Modal -->
-    <div class="modal-overlay" id="finishModal" style="display: none;">
+    <div class="modal-overlay" id="finishModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>🏁 Finish Exam Early?</h3>
+                <h3 id="modal-title">🏁 Finish Quiz Early?</h3>
             </div>
             <div class="modal-body">
                 <div class="current-status">
@@ -64,17 +71,31 @@
                         <li>Your current answers will be saved</li>
                         <li>You'll see your final score and detailed results</li>
                         <li>Unanswered questions won't count against you</li>
-                        <li>You can review your incorrect answers for learning</li>
+                        <li>You can review your incorrect answers with explanations</li>
                     </ul>
                 </div>
                 
-                <p class="confirmation-question">Are you sure you want to finish the exam now?</p>
+                <p class="confirmation-question">Are you sure you want to finish the quiz now?</p>
             </div>
             <div class="modal-footer">
-                <button class="modal-button cancel-button" id="cancelFinish">Continue Quiz</button>
-                <button class="modal-button confirm-button" id="confirmFinish">🏁 Finish Exam</button>
+                <button class="modal-button cancel-button" id="cancelFinish" aria-label="Continue with quiz">Continue Quiz</button>
+                <button class="modal-button confirm-button" id="confirmFinish" aria-label="Finish quiz now">🏁 Finish Quiz</button>
             </div>
         </div>
+    </div>
+
+    <!-- GitHub link for branding -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="https://github.com/yourusername/mendix-quiz" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.8); color: white; padding: 8px 12px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: all 0.3s;"
+           aria-label="View source code on GitHub">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+        </a>
     </div>
 
     <script src="script.js"></script>
