@@ -28,7 +28,52 @@
             <h2>Quiz Complete!</h2>
             <div class="score" id="finalScore">0/0</div>
             <p id="scoreMessage">Calculating...</p>
+            <div class="incorrect-questions" id="incorrectQuestions" style="display: none;"></div>
             <button class="restart-button" id="restartButton">Try Again</button>
+        </div>
+    </div>
+
+    <!-- Finish Exam Confirmation Modal -->
+    <div class="modal-overlay" id="finishModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🏁 Finish Exam Early?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="current-status">
+                    <h4>📊 Current Progress:</h4>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-label">Questions Answered:</span>
+                            <span class="status-value" id="modalQuestionsAnswered">0 of 0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Questions Remaining:</span>
+                            <span class="status-value" id="modalQuestionsRemaining">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Current Score:</span>
+                            <span class="status-value" id="modalCurrentScore">0/0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="what-happens">
+                    <h4>🔄 What happens when you finish early:</h4>
+                    <ul>
+                        <li>Your current answers will be saved</li>
+                        <li>You'll see your final score and detailed results</li>
+                        <li>Unanswered questions won't count against you</li>
+                        <li>You can review your incorrect answers for learning</li>
+                    </ul>
+                </div>
+                
+                <p class="confirmation-question">Are you sure you want to finish the exam now?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button cancel-button" id="cancelFinish">Continue Quiz</button>
+                <button class="modal-button confirm-button" id="confirmFinish">🏁 Finish Exam</button>
+            </div>
         </div>
     </div>
 
